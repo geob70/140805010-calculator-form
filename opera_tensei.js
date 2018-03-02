@@ -296,7 +296,9 @@ function processIntermediateResult(operand1, operand2, operator) {
 
 var pi = document.getElementById('btnpie');
 
-// var trig = ["sin", "cos", "tan"]
+var as = document.getElementById('sinh');
+var ac = document.getElementById('cosh');
+var at = document.getElementById('tanh');
 var s = document.getElementById('sin');
 var c = document.getElementById('cos');
 var t = document.getElementById('tan');
@@ -307,15 +309,29 @@ s.addEventListener("click", function (expression) {
     expression = input.value;
     input.value = Math.sin(expression);
 });
+as.addEventListener("click", function (expression) {
+    expression = input.value;
+    input.value = Math.sinh(expression);
+});
 
 c.addEventListener("click", function (expression) {
     expression = input.value;
     input.value = Math.cos(expression);
 });
 
+ac.addEventListener("click", function (expression) {
+    expression = input.value;
+    input.value = Math.cosh(expression);
+});
+
 t.addEventListener("click", function (expression) {
     expression = input.value;
     input.value = Math.tan(expression);
+});
+
+at.addEventListener("click", function (expression) {
+    expression = input.value;
+    input.value = Math.tanh(expression);
 });
 d.addEventListener("click", function () {
     expression = input.value;

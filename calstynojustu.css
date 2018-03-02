@@ -166,8 +166,6 @@ form.calcu {
     margin-top: 20%;
 }
 
-#btnzero {}
-
 #btnpie {
     background-color: whitesmoke;
 }
@@ -196,9 +194,15 @@ form.calcu {
 }
 
 .trig-align {
+    margin-top: 10px;
     /* display: inline-block; */
     /* background-color: aliceblue; */
     padding: 0px 0px 0px 0px;
+}
+
+#squa {
+    width: 10px;
+    text-align: center;
 }
 
 .grid-box {
@@ -344,7 +348,7 @@ form.calcu {
 }
 
 .dis {
-    margin-top: 0px;
+    margin-top: 20%;
 }
 
 .dis input {
@@ -367,6 +371,8 @@ input {
     padding: 10px;
     font-size: 16px;
 }
+
+
 /* 
 input[type=textbox] {
     color: rgb(16, 160, 165);
@@ -376,6 +382,15 @@ input[type=textbox] {
 
 .neww {
     border: 1px solid #4CAF50;
+    /* background-color: #041414; */
+    padding: 10px;
+    font-size: 16px;
+}
+
+newg {
+    border: none;
+    display: block;
+    float: left;
     /* background-color: #041414; */
     padding: 10px;
     font-size: 16px;

@@ -21,7 +21,7 @@
                 </td>
                 <td class="homepage">
                     <a onclick="document.getElementById('form').style.display='block'" style="width:auto;">
-                        <img class="Todo" src="images/avatar.png" alt="">
+                        <img class="Todo" src="images/avatar.png">
                     </a>
                 </td>
             </tr>
@@ -39,7 +39,11 @@
                         <button id="sin">sin</button>
                         <button id="tan">tan</button>
                         <button id="cos">cos</button>
-                        <button onclick="displayarithmetricbutton(this.innerHTML)">^</button>
+                        <button id="logg">log</button>
+                        <button id="sinh">sinh</button>
+                        <button id="tanh">tanh</button>
+                        <button id="cosh">cosh</button>
+                        <button id="squa" onclick="displayarithmetricbutton(this.innerHTML)">^</button>
                     </div>
 
                     <div class="otherbtn">
@@ -76,16 +80,21 @@
                         <button id="plus" onclick="displayarithmetricbutton(this.innerHTML)">+</button>
                         <button onclick="displayarithmetricbutton(this.innerHTML)">-</button>
                         <button id="equ" onclick="equalto()">=</button>
-                    </div
+                    </div>
+                </div>
             </div>
         </div>
-
         <div class="item" id="form">
             <div class="form-content animate">
                 <span class="close" onclick="document.getElementById('form').style.display='none'" style="width: auto">&times;</span>
                 <h1>Explore you EPL Teams </h1>
                 <p>Enter Club name : </p>
-                <input class="neww" id="box" type="textbox" placeholder="Club Name">
+                <input class="neww" id="box" onkeypress="" type="textbox" placeholder="Club Name">
+                <div class="newg" id="next" style="display:none">
+                    <input class="neww" id="box2" type="button"><br>
+                    <input class="neww" id="box2" type="button"><br>
+                    <input class="neww" id="box2" type="button"><br>
+                </div>
                 <!-- <input type="textbox">
                 <input type="textbox"> -->
             </div>
