@@ -1,4 +1,4 @@
-var operator = ['+', '-', 'x', '/', '^'];
+var operator = ['+', '-', 'x', '/', '^', 'mod'];
 var input = document.getElementById("display");
 var decimalAdded = false;
 
@@ -42,6 +42,7 @@ function equalto() {
     var equation = input.value;
     var lastChar = equation.substring(equation.length - 1);
     equation = equation.replace(/x/g, '*');
+    // equation = equation.replace(/mod/g, '&');
 
     if (equation.indexOf("%") > -1) {
         var res = equation.split('%');
@@ -134,7 +135,7 @@ function displaybrackets(btnValue) {
 }
 
 function checkParentheses(expression) {
-    var operators = '+,-,/,^,*';
+    var operators = '+,-,/,^,*,mod';
     var s = new Stack();
 
     for (var i = 0; i < expression.length; i++) {
@@ -170,10 +171,11 @@ function checkParentheses(expression) {
 /*to convert infix to postfix expression*/
 
 function shuntingAlgo(expression) {
-    var operators = '+,-,/,*,^';
+    var operators = '+,-,/,*,^,mod';
     var precedence = {
         '^': 4,
         '*': 3,
+        'mod': 4,
         '/': 3,
         '+': 2,
         '-': 2
@@ -181,6 +183,7 @@ function shuntingAlgo(expression) {
     var associative = {
         '^': 'Right',
         '*': 'Left',
+        'mod': 'Right',
         '/': 'Left',
         '+': 'Left',
         '-': 'Left'
@@ -235,7 +238,7 @@ function shuntingAlgo(expression) {
 }
 
 function postfixoperation(postfix) {
-    var operators = '+,/,-,*,^,²,&';
+    var operators = '+,/,-,*,^,mod';
     var s = new Stack();
     var res2 = postfix.split(" ");
 
@@ -287,6 +290,9 @@ function processIntermediateResult(operand1, operand2, operator) {
         case '^':
             interResult = Math.pow(Number(operand2), Number(operand1));
             break;
+            case 'mod':
+            interResult = Number(operand2) % Number(operand1);
+            break;
         default:
             console.log("could not be processed");
     }
@@ -295,7 +301,6 @@ function processIntermediateResult(operand1, operand2, operator) {
 }
 
 var pi = document.getElementById('btnpie');
-
 var as = document.getElementById('sinh');
 var ac = document.getElementById('cosh');
 var at = document.getElementById('tanh');
