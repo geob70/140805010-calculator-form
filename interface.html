@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="calstynojustu.css" type="text/css">
+    <title>Black_jack</title>
+</head>
+
+<div class="area">
+
+    <body>
+        <table class="design">
+            <tr>
+                <td class="homepage">
+                    <a onclick="document.getElementById('calco').style.display='block'" style="width:auto;">
+                        <img class="Todo" src="images/Cal.png">
+                    </a>
+                </td>
+                <td class="homepage">
+                    <a onclick="document.getElementById('form').style.display='block'" style="width:auto;">
+                        <img class="Todo" src="images/avatar.png" alt="">
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <div id="calco" class="item">
+            <div class="item-content animate">
+                <span class="close" onclick="document.getElementById('calco').style.display='none'" style="width: auto">&times;</span>
+                <h4>Scientific Calculator</h4>
+                <div class="calcu">
+                    <div class="dis">
+                        <input id="display" value="0" disabled>
+                        <br>
+                    </div>
+                    <div class="trig-align">
+                        <button id="sin">sin</button>
+                        <button id="tan">tan</button>
+                        <button id="cos">cos</button>
+                        <button onclick="displayarithmetricbutton(this.innerHTML)">^</button>
+                    </div>
+
+                    <div class="otherbtn">
+                        <button onclick="displayarithmetricbutton(this.innerHTML)">mod</button>
+                        <button onclick="displaybrackets(this.innerHTML)">(</button>
+                        <button onclick="displaybrackets(this.innerHTML)">)</button>
+                        <button id="sqr">√</button>
+                    </div>
+
+                    <div class="third-row">
+                        <button onclick="displayarithmetricbutton(this.innerHTML)">/</button>
+                        <button onclick="displayarithmetricbutton(this.innerHTML)">*</button>
+                        <button id="can" onclick="reset()">C</button>
+                        <button id="del" onclick="dele()">←</button>
+                    </div>
+
+                    <div class="grid-box">
+                        <button onclick="displaybutton(this.innerHTML)">1</button>
+                        <button onclick="displaybutton(this.innerHTML)">2</button>
+                        <button onclick="displaybutton(this.innerHTML)">3</button>
+                        <button onclick="displaybutton(this.innerHTML)">4</button>
+                        <button onclick="displaybutton(this.innerHTML)">5</button>
+                        <button onclick="displaybutton(this.innerHTML)">6</button>
+                        <button onclick="displaybutton(this.innerHTML)">7</button>
+                        <button onclick="displaybutton(this.innerHTML)">8</button>
+                        <button onclick="displaybutton(this.innerHTML)">9</button>
+                        <button id="btnzero" onclick="displaybutton(this.innerHTML)">0</button>
+                        <button id="btnpie" onclick="displaybutton(this.innerHTML)">π</button>
+                        <button onclick="displaydecbutton(this.innerHTML)">.</button>
+                    </div>
+
+                    <div class="bottom-right">
+                        <button onclick="">%</button>
+                        <button id="plus" onclick="displayarithmetricbutton(this.innerHTML)">+</button>
+                        <button onclick="displayarithmetricbutton(this.innerHTML)">-</button>
+                        <button id="equ" onclick="equalto()">=</button>
+                    </div
+            </div>
+        </div>
+
+        <div class="item" id="form">
+            <div class="form-content animate">
+                <span class="close" onclick="document.getElementById('form').style.display='none'" style="width: auto">&times;</span>
+                <h1>Explore you EPL Teams </h1>
+                <p>Enter Club name : </p>
+                <input class="neww" id="box" type="textbox" placeholder="Club Name">
+                <!-- <input type="textbox">
+                <input type="textbox"> -->
+            </div>
+        </div>
+</div>
+<script src="opera_tensei.js" type="text/Javascript"></script>
+</body>
+
+</html>
